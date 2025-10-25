@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Background Changer + Employee Info</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading">Загрузка модели...</div>
+  <video id="video" autoplay muted playsinline></video>
+  <canvas id="output"></canvas>
+
+  <div id="controls">
+    <div class="control">
+      <label>Фон:</label>
+      <input type="file" id="bgInput" accept="image/*">
+    </div>
+    <div class="control">
+      <label>Цвет фона:</label>
+      <button id="bgBlack">Чёрный</button>
+      <button id="bgBlue">Синий</button>
+      <button id="bgGray">Серый</button>
+      <button id="bgWhite">Белый</button>
+    </div>
+    <div class="control">
+      <label>Яркость:</label>
+      <input type="range" id="brightness" min="50" max="150" value="100">
+    </div>
+    <div class="control">
+      <label>Насыщенность:</label>
+      <input type="range" id="saturation" min="50" max="150" value="100">
+    </div>
+    <div class="control">
+      <label>Приватность:</label>
+      <button id="btnLow">Low</button>
+      <button id="btnMedium">Medium</button>
+      <button id="btnHigh">High</button>
+    </div>
+  </div>
+  <div id="fps">FPS: --</div>
+  <div id="modelInfo">Информация о модели: загрузка...</div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
